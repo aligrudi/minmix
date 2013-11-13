@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2010-2012 Ali Gholami Rudi <ali at rudi dot ir>
  *
- * This file is released under GNU GPL version 2.
+ * This program is released under the Modified BSD license.
  */
 #include <ctype.h>
 #include <fcntl.h>
