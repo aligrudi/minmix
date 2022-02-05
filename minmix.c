@@ -77,9 +77,10 @@ static char *usage =
 int main(int argc, char *argv[])
 {
 	int i, j;
-	afd = open("/dev/mixer", O_RDWR);
+	char *ossmixer = getenv("OSSMIXER");
+	afd = open(ossmixer ? ossmixer : "/dev/mixer", O_RDWR);
 	if (afd < 0) {
-		fprintf(stderr, "cannot open /dev/mixer\n");
+		fprintf(stderr, "minmix: cannot open OSS mixer\n");
 		return 1;
 	}
 	if (argc < 2)
